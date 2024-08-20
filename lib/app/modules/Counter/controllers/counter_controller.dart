@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:get_cli/common/utils/json_serialize/sintaxe.dart';
+// import 'package:get_cli/common/utils/json_serialize/sintaxe.dart';
 
 class CounterController extends GetxController {
   var bilangan = 0.obs;
