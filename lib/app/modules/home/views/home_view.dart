@@ -14,6 +14,7 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Center(
             child: Text(

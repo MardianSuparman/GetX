@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:myapp/app/modules/Kategori/views/create_kategori_view.dart';
+import 'package:myapp/app/modules/Kategori/views/show_kategori_view.dart';
+import 'package:myapp/app/modules/Kategori/views/update_kategori_view.dart';
 
 import '../middlewares/auth_middleware.dart';
 import '../modules/Biodata/bindings/biodata_binding.dart';
@@ -8,6 +11,8 @@ import '../modules/Bottom_Menu/bindings/bottom_menu_binding.dart';
 import '../modules/Bottom_Menu/views/bottom_menu_view.dart';
 import '../modules/Counter/bindings/counter_binding.dart';
 import '../modules/Counter/views/counter_view.dart';
+import '../modules/Kategori/bindings/kategori_binding.dart';
+import '../modules/Kategori/views/kategori_view.dart';
 import '../modules/Login/bindings/login_binding.dart';
 import '../modules/Login/views/login_view.dart';
 import '../modules/Profile/bindings/profile_binding.dart';
@@ -65,9 +70,33 @@ class AppPages {
       middlewares: [AuthMiddleware()], // get page
     ),
     GetPage(
-      name: _Paths.BOTTOM_MENU,
-      page: () => BottomMenuView(),
-      binding: BottomMenuBinding(),
+        name: _Paths.BOTTOM_MENU,
+        page: () => BottomMenuView(),
+        binding: BottomMenuBinding(),
+        middlewares: [AuthMiddleware()]
+    ),
+    GetPage(
+      name: _Paths.KATEGORI,
+      page: () => KategoriView(),
+      binding: KategoriBinding(),
+      middlewares: [AuthMiddleware()]
+    ),
+    GetPage(
+      name: Routes.CREATE_KATEGORI, 
+      page: () => CreateKategoriView(),
+      binding: KategoriBinding(),
+      middlewares: [AuthMiddleware()]
+    ),
+    GetPage(
+      name: Routes.UPDATE_KATEGORI, 
+      page: () => UpdateKategoriView(),
+      binding: KategoriBinding(),
+      middlewares: [AuthMiddleware()]
+    ),
+    GetPage(
+      name: Routes.SHOW_KATEGORI, 
+      page: () => ShowKategoriView(),
+      binding: KategoriBinding(),
       middlewares: [AuthMiddleware()]
     ),
   ];
