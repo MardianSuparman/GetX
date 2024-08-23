@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:myapp/app/modules/Kategori/views/kategori_view.dart';
+import 'package:myapp/app/modules/Tag/views/tag_view.dart';
+import 'package:myapp/app/modules/User/views/user_view.dart';
 
 import '../../Biodata/views/biodata_view.dart';
 import '../../Counter/views/counter_view.dart';
@@ -17,6 +19,8 @@ class BottomMenuView extends GetView<BottomMenuController> {
     HomeView(),
     CounterView(),
     KategoriView(),
+    TagView(),
+    UserView(),
     BiodataView(),
     ProfileView(),
   ];
@@ -30,6 +34,8 @@ class BottomMenuView extends GetView<BottomMenuController> {
           TabItem(icon: Icons.home, title: 'Home'),
           TabItem(icon: Icons.add, title: 'Counter'),
           TabItem(icon: Icons.category, title: 'Kategori'),
+          TabItem(icon: Icons.tag_faces, title: 'Tag'),
+          TabItem(icon: Icons.people, title: 'User'),
           TabItem(icon: Icons.person, title: 'Biodata'),
           TabItem(icon: Icons.person, title: 'Profile'),
         ],
